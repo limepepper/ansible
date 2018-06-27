@@ -21,7 +21,7 @@ description:
 - This module can be used to configure VMware DRS Affinity rule for virtual machine in given cluster.
 version_added: 2.5
 author:
-- Abhijeet Kasurde (@akasurde)
+- Abhijeet Kasurde (@Akasurde)
 notes:
 - Tested on vSphere 6.5
 requirements:
@@ -231,7 +231,7 @@ class VmwareDrs(PyVmomi):
     # Create
     def create(self):
         """
-        Function to create a DRS rule if rule does not exists
+        Function to create a DRS rule if rule does not exist
         """
         rule_obj = self.get_rule_key_by_name(rule_name=self.rule_name)
         if rule_obj is not None:

@@ -23,7 +23,7 @@ description:
     - Manage local roles on an ESXi host
 version_added: "2.5"
 author:
-- Abhijeet Kasurde (@akasurde) <akasurde@redhat.com>
+- Abhijeet Kasurde (@Akasurde) <akasurde@redhat.com>
 notes:
     - Tested on ESXi 6.5
     - Be sure that the ESXi user used for login, has the appropriate rights to create / delete / edit roles
@@ -192,7 +192,7 @@ class VMwareLocalRoleManager(PyVmomi):
                                                                       failIfUsed=self.force)
         except vim.fault.NotFound as e:
             self.module.fail_json(msg="Failed to remove a role %s as the user specified role name "
-                                      "does not exists." % self.role_name,
+                                      "does not exist." % self.role_name,
                                   details=e.msg)
         except vim.fault.RemoveFailed as e:
             msg = "Failed to remove a role %s as the user specified role name." % self.role_name
